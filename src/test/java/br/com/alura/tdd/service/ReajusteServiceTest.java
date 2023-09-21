@@ -32,7 +32,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        public  void reajusteDeveriaSerDeVintePorCentoQuandoDesenpenhoForBom() {
+        public  void reajusteDeveriaSerDeVintePorCentoQuandoDesenpenhoForOtimo() {
             ReajusteService service = new ReajusteService();
             Funcionario funcionario = new Funcionario("Charles", LocalDate.now(), new BigDecimal ("1000.00"));
 

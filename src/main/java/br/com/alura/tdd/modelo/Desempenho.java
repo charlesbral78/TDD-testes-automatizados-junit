@@ -1,8 +1,34 @@
 package br.com.alura.tdd.modelo;
 
+import java.math.BigDecimal;
+
 public enum Desempenho {
 
-    A_DESEJAR,
-    BOM,
-    OTIMO;
+    A_DESEJAR {
+        @Override
+        public BigDecimal percentualReajuste() {
+            return new BigDecimal("0.03");
+        }
+    },
+    BOM {
+        @Override
+        public BigDecimal percentualReajuste() {
+            return new BigDecimal("0.15");
+        }
+    },
+    OTIMO {
+        @Override
+        public BigDecimal percentualReajuste() {
+            return new BigDecimal("0.2");
+        }
+    };
+/* SE FUTURAMENTE HOUVER MUDANÇA PARA INSERIR UMA NOVA REGRA, BASTA SEGUIR O EXEMPLO A BAIXO POIS, ESTA FLEXIVEL
+
+ESPETACULAR {
+        @Override
+        public BigDecimal percentualReajuste() {
+            return new BigDecimal("0.4");
+        }
+    };*/
+    public abstract BigDecimal percentualReajuste();
 }
